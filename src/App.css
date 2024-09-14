@@ -1,38 +1,200 @@
+/* App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url(/public/img/fondo.jpg);
+  margin: 0; /* Elimina el margen por defecto del body */
+  padding: 0; /* Elimina el relleno por defecto del body */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 100vh; /* Hace que el body ocupe toda la altura de la ventana */
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  max-width: 500px; /* Ancho máximo reducido para hacer el contenido más compacto */
+  width: 100%; /* Ajusta al ancho del viewport */
+  margin: auto; /* Centra el contenedor principal horizontalmente */
+  position: relative; /* Necesario para posicionar el header correctamente */
+  color: #000000; /* Texto blanco para contraste */
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  position: absolute; /* Posiciona el header en la esquina superior derecha */
+  top: 10px; /* Ajusta el margen superior */
+  right: 10px; /* Ajusta el margen derecho */
+  color: #000000; /* Texto negro */
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #b02727;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wallet-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff; /* Fondo blanco para el contenedor de la wallet */
+  padding: 10px 15px;
+  border-radius: 10px;
 }
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Espacio entre la wallet y el botón de conectar */
+}
+
+.wallet-address {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #ffffff; /* Texto negro para contraste */
+  box-shadow: #4d4545;
+}
+
+.btn-connect, .btn-disconnect {
+  background-color: #ffffff; /* Fondo blanco para contraste */
+  border: none;
+  color: #000000; /* Texto negro para destacar */
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-connect:hover, .btn-disconnect:hover {
+  background-color: #ccc; /* Fondo gris al hacer hover */
+}
+
+.main-content {
+  margin-top: 60px; /* Asegura que el contenido principal esté por debajo del header */
+  width: 100%;
+  max-width: 600px; /* Ancho máximo del contenido principal */
+  background-color: #f6f6f6; /* Fondo negro para el contenido principal */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  text-align: center;
+  color: #000000; /* Texto blanco */
+}
+
+.project-info {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.network-select {
+  margin: 20px 0;
+}
+
+.networks {
+  display: flex;
+  justify-content: center; /* Centra los logos */
+  gap: 10px; /* Espacio reducido entre los logos */
+}
+
+.network-logo {
+  width: 40px; /* Tamaño de los logos */
+}
+
+.network-button {
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.network-button.selected {
+  border-color: green;
+}
+
+
+.price-info {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #000000; /* Texto blanco */
+}
+
+.progress-bar-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.progress {
+  background-color: #4d4545;
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  background-color: #ff0000; /* Barra de progreso en rojo */
+  height: 100%;
+  border-radius: 10px;
+}
+
+.goal {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000000; /* Texto blanco */
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  width: 60%;
+  background-color: #ff00003b; /* Fondo rojo claro */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.input-field input {
+  border: none;
+  outline: none;
+  width: 80%;
+  background-color: transparent;
+}
+
+.token-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.btn-buy {
+  background-color: #b32222; /* Fondo negro */
+  color: #ffffff; /* Texto blanco */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-buy:hover {
+  background-color: #ccc; /* Fondo gris al hacer hover */
+}
+
